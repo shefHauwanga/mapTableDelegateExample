@@ -13,4 +13,16 @@ class ParentContainerController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "ContainerToChildMapView"?:
+            print("Map")
+        case "ContainerToChildTableView"?:
+            print("Table")
+        default:
+            preconditionFailure("Unexpected segue identifier")
+        }
+    }
+
 }
