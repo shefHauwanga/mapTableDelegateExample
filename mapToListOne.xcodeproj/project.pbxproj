@@ -17,6 +17,7 @@
 		BB65C6601F0D92B0009585B4 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */; };
 		BB65C6631F0D961D009585B4 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65C6621F0D961D009585B4 /* LocationTableViewCell.swift */; };
 		BB8F7E9B1F0EEC4300A01E01 /* LocationTableDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F7E9A1F0EEC4300A01E01 /* LocationTableDataSource.swift */; };
+		BB8F7E9F1F0EFFA500A01E01 /* ChildMapViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB8F7E9E1F0EFFA500A01E01 /* ChildMapViewDelegate.swift */; };
 		BBB858E71F0DD8AA0019E584 /* ResturantLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E61F0DD8AA0019E584 /* ResturantLocation.swift */; };
 		BBB858E91F0DDC290019E584 /* RestaurantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E81F0DDC290019E584 /* RestaurantStore.swift */; };
 /* End PBXBuildFile section */
@@ -46,6 +47,7 @@
 		BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewController.swift; path = Controllers/LocationTableViewController.swift; sourceTree = "<group>"; };
 		BB65C6621F0D961D009585B4 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewCell.swift; path = Views/LocationTableViewCell.swift; sourceTree = "<group>"; };
 		BB8F7E9A1F0EEC4300A01E01 /* LocationTableDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableDataSource.swift; path = Controllers/LocationTableDataSource.swift; sourceTree = "<group>"; };
+		BB8F7E9E1F0EFFA500A01E01 /* ChildMapViewDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildMapViewDelegate.swift; path = Controllers/ChildMapViewDelegate.swift; sourceTree = "<group>"; };
 		BBB858E61F0DD8AA0019E584 /* ResturantLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResturantLocation.swift; path = Model/ResturantLocation.swift; sourceTree = "<group>"; };
 		BBB858E81F0DDC290019E584 /* RestaurantStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantStore.swift; path = Model/RestaurantStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -113,10 +115,11 @@
 		BB65C65A1F0D8A37009585B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BB65C65B1F0D8A7B009585B4 /* ParentContainerController.swift */,
-				BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */,
-				BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */,
 				BB8F7E9A1F0EEC4300A01E01 /* LocationTableDataSource.swift */,
+				BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */,
+				BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */,
+				BB65C65B1F0D8A7B009585B4 /* ParentContainerController.swift */,
+				BB8F7E9E1F0EFFA500A01E01 /* ChildMapViewDelegate.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				BBB858E91F0DDC290019E584 /* RestaurantStore.swift in Sources */,
 				BB65C65C1F0D8A7B009585B4 /* ParentContainerController.swift in Sources */,
 				BB8F7E9B1F0EEC4300A01E01 /* LocationTableDataSource.swift in Sources */,
+				BB8F7E9F1F0EFFA500A01E01 /* ChildMapViewDelegate.swift in Sources */,
 				BBB858E71F0DD8AA0019E584 /* ResturantLocation.swift in Sources */,
 				BB65C65E1F0D8E31009585B4 /* ChildMapViewContoller.swift in Sources */,
 				BB65C63B1F0D8858009585B4 /* AppDelegate.swift in Sources */,

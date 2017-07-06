@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
+class ChildMapViewContoller: UIViewController {
     @IBOutlet var mapView: MKMapView!
     
     var restaurantStore: RestaurantStore!
@@ -34,29 +34,5 @@ class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
         let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion.init(center: icbm, span: span)
         mapView.setRegion(region, animated: true)
-    }
-    
-    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
-        if let annotation = annotation as? RestaurantLocation {
-            let identifier = "pin"
-            var view: MKPinAnnotationView
-            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier) as? MKPinAnnotationView {
-                dequeuedView.annotation = annotation
-                view = dequeuedView
-            } else {
-                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
-                view.canShowCallout = true
-                view.calloutOffset = CGPoint(x: -5, y: 5)
-                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
-            }
-            return view
-        }
-        return nil
-    }
-    
-    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-        if let restaurantLocation = view.annotation {
-            zoom(coordinate: restaurantLocation.coordinate)
-        }
-    }
+    }    
 }
