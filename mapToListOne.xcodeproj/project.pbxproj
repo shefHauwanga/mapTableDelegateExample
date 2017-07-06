@@ -16,8 +16,8 @@
 		BB65C65E1F0D8E31009585B4 /* ChildMapViewContoller.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */; };
 		BB65C6601F0D92B0009585B4 /* LocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */; };
 		BB65C6631F0D961D009585B4 /* LocationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB65C6621F0D961D009585B4 /* LocationTableViewCell.swift */; };
-		BBB858E11F0D9C980019E584 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E01F0D9C980019E584 /* Location.swift */; };
-		BBB858E51F0DA0A30019E584 /* LocationStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E41F0DA0A30019E584 /* LocationStore.swift */; };
+		BBB858E71F0DD8AA0019E584 /* ResturantLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E61F0DD8AA0019E584 /* ResturantLocation.swift */; };
+		BBB858E91F0DDC290019E584 /* RestaurantStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB858E81F0DDC290019E584 /* RestaurantStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,8 +44,8 @@
 		BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChildMapViewContoller.swift; path = Controllers/ChildMapViewContoller.swift; sourceTree = "<group>"; };
 		BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewController.swift; path = Controllers/LocationTableViewController.swift; sourceTree = "<group>"; };
 		BB65C6621F0D961D009585B4 /* LocationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationTableViewCell.swift; path = Views/LocationTableViewCell.swift; sourceTree = "<group>"; };
-		BBB858E01F0D9C980019E584 /* Location.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Location.swift; path = Model/Location.swift; sourceTree = "<group>"; };
-		BBB858E41F0DA0A30019E584 /* LocationStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LocationStore.swift; path = Model/LocationStore.swift; sourceTree = "<group>"; };
+		BBB858E61F0DD8AA0019E584 /* ResturantLocation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResturantLocation.swift; path = Model/ResturantLocation.swift; sourceTree = "<group>"; };
+		BBB858E81F0DDC290019E584 /* RestaurantStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RestaurantStore.swift; path = Model/RestaurantStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,8 +129,8 @@
 		BBB858DF1F0D9C0F0019E584 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				BBB858E01F0D9C980019E584 /* Location.swift */,
-				BBB858E41F0DA0A30019E584 /* LocationStore.swift */,
+				BBB858E61F0DD8AA0019E584 /* ResturantLocation.swift */,
+				BBB858E81F0DDC290019E584 /* RestaurantStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -240,10 +240,10 @@
 			files = (
 				BB65C6601F0D92B0009585B4 /* LocationTableViewController.swift in Sources */,
 				BB65C6631F0D961D009585B4 /* LocationTableViewCell.swift in Sources */,
+				BBB858E91F0DDC290019E584 /* RestaurantStore.swift in Sources */,
 				BB65C65C1F0D8A7B009585B4 /* ParentContainerController.swift in Sources */,
-				BBB858E51F0DA0A30019E584 /* LocationStore.swift in Sources */,
+				BBB858E71F0DD8AA0019E584 /* ResturantLocation.swift in Sources */,
 				BB65C65E1F0D8E31009585B4 /* ChildMapViewContoller.swift in Sources */,
-				BBB858E11F0D9C980019E584 /* Location.swift in Sources */,
 				BB65C63B1F0D8858009585B4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
