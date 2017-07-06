@@ -13,8 +13,13 @@ struct Location {
     let name: String
     let icbm: CLLocationCoordinate2D?
     
-    init(name: String, coordinate: CLLocationCoordinate2D? = nil) {
+    init(name: String, coordinate: (Double, Double)? = nil) {
         self.name = name
-        self.icbm = coordinate
+        
+        if let icbm = coordinate {
+            self.icbm = CLLocationCoordinate2D(latitude: icbm.0, longitude: icbm.1)
+        } else {
+            self.icbm = nil
+        }
     }
 }
