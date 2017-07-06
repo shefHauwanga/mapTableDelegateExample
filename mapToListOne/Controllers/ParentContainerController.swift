@@ -17,7 +17,8 @@ class ParentContainerController: UIViewController {
             let childMapViewController = segue.destination as! ChildMapViewContoller
             childMapViewController.restaurantStore = self.restaurantStore
         case "ContainerToChildTableView"?:
-            print("Table")
+            let locationTableController = segue.destination as! LocationTableViewController
+            locationTableController.restaurantStore = self.restaurantStore
         default:
             preconditionFailure("Unexpected segue identifier")
         }
