@@ -30,6 +30,12 @@ class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
         }
     }
     
+    func zoom(coordinate icbm: CLLocationCoordinate2D) {
+        let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        let region = MKCoordinateRegion.init(center: icbm, span: span)
+        mapView.setRegion(region, animated: true)
+    }
+    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? RestaurantLocation {
             let identifier = "pin"
@@ -46,5 +52,11 @@ class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
             return view
         }
         return nil
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+        if let restaurantLocation = view.annotation {
+            zoom(coordinate: restaurantLocation.coordinate)
+        }
     }
 }
