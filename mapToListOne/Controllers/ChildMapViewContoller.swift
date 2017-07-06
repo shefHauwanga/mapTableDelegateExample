@@ -12,14 +12,11 @@ import CoreLocation
 
 class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
-    //var locationManager = CLLocationManager.init()
     
     var restaurantStore: RestaurantStore!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //locationManager.requestWhenInUseAuthorization()
         
         mapView.delegate = self
         mapView.mapType = .standard
@@ -44,6 +41,7 @@ class ChildMapViewContoller: UIViewController, MKMapViewDelegate {
                 view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 view.canShowCallout = true
                 view.calloutOffset = CGPoint(x: -5, y: 5)
+                view.rightCalloutAccessoryView = UIButton(type: .detailDisclosure) as UIView
             }
             return view
         }
