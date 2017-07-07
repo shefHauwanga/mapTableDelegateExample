@@ -34,6 +34,6 @@ class LocationTableViewController: UIViewController, UITableViewDelegate, Select
     
     func pickRow(_ rowNumber: Int) {
         let indexPath = IndexPath(row: rowNumber, section: 0)
-        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        self.tableView.selectRow(at: indexPath, animated: true, scrollPosition: .top)
     }
 }
