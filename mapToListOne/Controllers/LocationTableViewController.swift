@@ -16,7 +16,7 @@ class LocationTableViewController: UIViewController, UITableViewDelegate, Select
     @IBOutlet var tableView: UITableView!
     
     var restaurantStore: RestaurantStore!
-    var tappedDelegate: TappedCellDelegate?
+    var tappedDelegate: TappedDelegate?
     let dataSource = LocationTableDataSource()
     
     override func viewDidLoad() {

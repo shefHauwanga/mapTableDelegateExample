@@ -8,15 +8,12 @@
 
 import UIKit
 
-protocol TappedAnnotationDelegate {
+protocol TappedDelegate {
     func annotationTapped(_ rowNumber: Int)
-}
-
-protocol TappedCellDelegate {
     func cellTapped(_ rowNumber: Int)
 }
 
-class ParentContainerController: UIViewController, TappedAnnotationDelegate, TappedCellDelegate {
+class ParentContainerController: UIViewController, TappedDelegate {
     let restaurantStore = RestaurantStore()
     var selectRowDelegate: SelectedRowDelegate?
     var selectAnnotationDelegate: SelectAnnotationDelegate?

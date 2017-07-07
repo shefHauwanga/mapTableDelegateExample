@@ -32,7 +32,7 @@ extension ChildMapViewContoller: MKMapViewDelegate {
         if let restaurantLocation = view.annotation as? RestaurantLocation {
             zoom(coordinate: restaurantLocation.coordinate)
             if let restaurantIndex = restaurantStore.allLocations.index(of: restaurantLocation) {
-                tappedDelegate.annotationTapped(restaurantIndex)
+                tappedDelegate?.annotationTapped(restaurantIndex)
             }
         }
     }
