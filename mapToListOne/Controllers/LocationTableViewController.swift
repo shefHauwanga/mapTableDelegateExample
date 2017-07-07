@@ -8,7 +8,11 @@
 
 import UIKit
 
-class LocationTableViewController: UIViewController, UITableViewDelegate {
+protocol SelectedRowDelegate {
+    func pickRow(_ rowNumber: Int)
+}
+
+class LocationTableViewController: UIViewController, UITableViewDelegate, SelectedRowDelegate {
     @IBOutlet var tableView: UITableView!
     
     var restaurantStore: RestaurantStore!
@@ -23,6 +27,11 @@ class LocationTableViewController: UIViewController, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+    }
+    
+    func pickRow(_ rowNumber: Int) {
+        let indexPath = IndexPath(row: rowNumber, section: 0)
         self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }

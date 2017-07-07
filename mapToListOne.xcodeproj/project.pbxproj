@@ -115,11 +115,11 @@
 		BB65C65A1F0D8A37009585B4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BB8F7E9A1F0EEC4300A01E01 /* LocationTableDataSource.swift */,
-				BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */,
-				BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */,
 				BB65C65B1F0D8A7B009585B4 /* ParentContainerController.swift */,
+				BB65C65D1F0D8E31009585B4 /* ChildMapViewContoller.swift */,
+				BB65C65F1F0D92B0009585B4 /* LocationTableViewController.swift */,
 				BB8F7E9E1F0EFFA500A01E01 /* ChildMapViewDelegate.swift */,
+				BB8F7E9A1F0EEC4300A01E01 /* LocationTableDataSource.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

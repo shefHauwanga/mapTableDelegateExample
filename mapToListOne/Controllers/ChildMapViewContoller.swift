@@ -14,6 +14,7 @@ class ChildMapViewContoller: UIViewController {
     @IBOutlet var mapView: MKMapView!
     
     var restaurantStore: RestaurantStore!
+    var tappedDelegate: TappedAnnotationDelegate!
     
     override func viewDidLoad() {
         super.viewDidLoad()
