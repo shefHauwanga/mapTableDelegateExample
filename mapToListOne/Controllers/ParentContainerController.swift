@@ -36,9 +36,7 @@ class ParentContainerController: UIViewController, TappedDelegate {
     }
     
     func annotationTapped(_ rowNumber: Int) {
-        if let delegate = selectRowDelegate {
-            delegate.pickRow(rowNumber)
-        }
+        selectRowDelegate?.pickRow(rowNumber)
     }
     
     func cellTapped(_ rowNumber: Int) {
