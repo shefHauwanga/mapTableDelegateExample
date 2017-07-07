@@ -20,7 +20,13 @@ class LocationTableDataSource: NSObject, UITableViewDataSource {
         
         let restaurantLocation = restaurantLocationStore.allLocations[indexPath.row]
         
-        cell.locationNameLabel.text = restaurantLocation.title
+        if restaurantLocation.title == "BLANK" {
+            cell.isUserInteractionEnabled = false
+            cell.locationNameLabel.text = ""
+        } else {
+            cell.isUserInteractionEnabled = true
+            cell.locationNameLabel.text = restaurantLocation.title
+        }
         
         return cell
     }

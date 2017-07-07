@@ -32,5 +32,9 @@ class RestaurantStore: NSObject {
         self.addLocation(name: "Superica", icbm: (33.859933, -84.381148))
         self.addLocation(name: "Atlanta Fish Market", icbm: (33.836689, -84.378747))
         self.addLocation(name: "Cafe Sunflower", icbm: (33.812618, -84.393207))
+        
+        for _ in 1...9 {
+            self.addLocation(name: "BLANK", icbm: (0.0, 0.0))
+        }
     }
 }
