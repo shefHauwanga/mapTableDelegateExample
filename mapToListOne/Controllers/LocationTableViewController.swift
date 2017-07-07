@@ -16,6 +16,7 @@ class LocationTableViewController: UIViewController, UITableViewDelegate, Select
     @IBOutlet var tableView: UITableView!
     
     var restaurantStore: RestaurantStore!
+    var tappedDelegate: TappedCellDelegate?
     let dataSource = LocationTableDataSource()
     
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ class LocationTableViewController: UIViewController, UITableViewDelegate, Select
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+        tappedDelegate?.cellTapped(indexPath.row)
     }
     
     func pickRow(_ rowNumber: Int) {

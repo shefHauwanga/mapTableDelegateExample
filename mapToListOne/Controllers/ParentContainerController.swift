@@ -12,9 +12,14 @@ protocol TappedAnnotationDelegate {
     func annotationTapped(_ rowNumber: Int)
 }
 
-class ParentContainerController: UIViewController, TappedAnnotationDelegate {
+protocol TappedCellDelegate {
+    func cellTapped(_ rowNumber: Int)
+}
+
+class ParentContainerController: UIViewController, TappedAnnotationDelegate, TappedCellDelegate {
     let restaurantStore = RestaurantStore()
     var selectRowDelegate: SelectedRowDelegate?
+    var selectAnnotationDelegate: SelectAnnotationDelegate?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
@@ -22,9 +27,11 @@ class ParentContainerController: UIViewController, TappedAnnotationDelegate {
             let childMapViewController = segue.destination as! ChildMapViewContoller
             childMapViewController.restaurantStore = self.restaurantStore
             childMapViewController.tappedDelegate = self
+            selectAnnotationDelegate = childMapViewController
         case "ContainerToChildTableView"?:
             let locationTableController = segue.destination as! LocationTableViewController
             locationTableController.restaurantStore = self.restaurantStore
+            locationTableController.tappedDelegate = self
             selectRowDelegate = locationTableController
         default:
             preconditionFailure("Unexpected segue identifier")
@@ -35,5 +42,9 @@ class ParentContainerController: UIViewController, TappedAnnotationDelegate {
         if let delegate = selectRowDelegate {
             delegate.pickRow(rowNumber)
         }
+    }
+    
+    func cellTapped(_ rowNumber: Int) {
+        selectAnnotationDelegate?.pickAnnotation(rowNumber)
     }
 }

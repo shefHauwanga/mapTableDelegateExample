@@ -10,7 +10,11 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class ChildMapViewContoller: UIViewController {
+protocol SelectAnnotationDelegate {
+    func pickAnnotation(_ rowNumber: Int)
+}
+
+class ChildMapViewContoller: UIViewController, SelectAnnotationDelegate {
     @IBOutlet var mapView: MKMapView!
     
     var restaurantStore: RestaurantStore!
@@ -35,5 +39,10 @@ class ChildMapViewContoller: UIViewController {
         let span = MKCoordinateSpan.init(latitudeDelta: 0.05, longitudeDelta: 0.05)
         let region = MKCoordinateRegion.init(center: icbm, span: span)
         mapView.setRegion(region, animated: true)
-    }    
+    }
+    
+    func pickAnnotation(_ rowNumber: Int) {
+        zoom(coordinate: restaurantStore.allLocations[rowNumber].coordinate)
+        mapView.selectAnnotation(restaurantStore.allLocations[rowNumber], animated: true)
+    }
 }
