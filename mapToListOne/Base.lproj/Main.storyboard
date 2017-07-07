@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="2039" y="-133"/>
         </scene>
-        <!--Location Table View Controller-->
+        <!--Child Table View Controller-->
         <scene sceneID="NGh-GD-0fs">
             <objects>
-                <viewController id="pUK-DX-D7M" customClass="LocationTableViewController" customModule="mapToListOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="pUK-DX-D7M" customClass="ChildTableViewController" customModule="mapToListOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5Gy-nc-Sxa"/>
                         <viewControllerLayoutGuide type="bottom" id="WG8-iM-MWb"/>

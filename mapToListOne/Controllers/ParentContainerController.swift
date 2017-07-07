@@ -26,7 +26,7 @@ class ParentContainerController: UIViewController, TappedDelegate {
             childMapViewController.tappedDelegate = self
             selectAnnotationDelegate = childMapViewController
         case "ContainerToChildTableView"?:
-            let locationTableController = segue.destination as! LocationTableViewController
+            let locationTableController = segue.destination as! ChildTableViewController
             locationTableController.restaurantStore = self.restaurantStore
             locationTableController.tappedDelegate = self
             selectRowDelegate = locationTableController

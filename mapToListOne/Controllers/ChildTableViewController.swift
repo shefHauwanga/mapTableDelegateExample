@@ -1,8 +1,8 @@
 //
-//  LocationTableViewController.swift
+//  ChildTableViewController.swift
 //  mapToListOne
 //
-//  Created by sheefeni on 7/5/17.
+//  Created by sheefeni on 7/7/17.
 //  Copyright © 2017 ShefCooksCode. All rights reserved.
 //
 
@@ -12,12 +12,12 @@ protocol SelectedRowDelegate {
     func pickRow(_ rowNumber: Int)
 }
 
-class LocationTableViewController: UIViewController, UITableViewDelegate, SelectedRowDelegate {
+class ChildTableViewController: UIViewController, UITableViewDelegate, SelectedRowDelegate {
     @IBOutlet var tableView: UITableView!
     
     var restaurantStore: RestaurantStore!
     var tappedDelegate: TappedDelegate?
-    let dataSource = LocationTableDataSource()
+    let dataSource = ChildTableDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()

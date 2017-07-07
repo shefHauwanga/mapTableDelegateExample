@@ -1,14 +1,14 @@
 //
-//  LocationTableDataSource.swift
+//  ChildTableDataSource.swift
 //  mapToListOne
 //
-//  Created by sheefeni on 7/6/17.
+//  Created by sheefeni on 7/7/17.
 //  Copyright © 2017 ShefCooksCode. All rights reserved.
 //
 
 import UIKit
 
-class LocationTableDataSource: NSObject, UITableViewDataSource {
+class ChildTableDataSource: NSObject, UITableViewDataSource {
     var restaurantLocationStore: RestaurantStore!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
