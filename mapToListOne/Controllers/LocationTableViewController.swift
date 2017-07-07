@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LocationTableViewController: UIViewController {
+class LocationTableViewController: UIViewController, UITableViewDelegate {
     @IBOutlet var tableView: UITableView!
     
     var restaurantStore: RestaurantStore!
@@ -18,6 +18,11 @@ class LocationTableViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = dataSource
+        tableView.delegate = self
         dataSource.restaurantLocationStore = restaurantStore
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
     }
 }
