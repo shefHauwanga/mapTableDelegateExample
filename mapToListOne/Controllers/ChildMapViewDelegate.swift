@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-extension ChildMapViewContoller: MKMapViewDelegate {
+extension ChildMapViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? RestaurantLocation {
             let identifier = "pin"

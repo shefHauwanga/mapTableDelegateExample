@@ -1,8 +1,8 @@
 //
-//  ChildMapViewContoller.swift
+//  ChildMapViewController.swift
 //  mapToListOne
 //
-//  Created by sheefeni on 7/5/17.
+//  Created by sheefeni on 7/7/17.
 //  Copyright © 2017 ShefCooksCode. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ protocol SelectAnnotationDelegate {
     func pickAnnotation(_ rowNumber: Int)
 }
 
-class ChildMapViewContoller: UIViewController, SelectAnnotationDelegate {
+class ChildMapViewController: UIViewController, SelectAnnotationDelegate {
     @IBOutlet var mapView: MKMapView!
     
     var restaurantStore: RestaurantStore!

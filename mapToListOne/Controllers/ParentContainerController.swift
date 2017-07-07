@@ -21,7 +21,7 @@ class ParentContainerController: UIViewController, TappedDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
         case "ContainerToChildMapView"?:
-            let childMapViewController = segue.destination as! ChildMapViewContoller
+            let childMapViewController = segue.destination as! ChildMapViewController
             childMapViewController.restaurantStore = self.restaurantStore
             childMapViewController.tappedDelegate = self
             selectAnnotationDelegate = childMapViewController

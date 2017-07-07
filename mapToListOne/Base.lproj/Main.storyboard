@@ -52,10 +52,10 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
-        <!--Child Map View Contoller-->
+        <!--Child Map View Controller-->
         <scene sceneID="B67-bE-W5L">
             <objects>
-                <viewController id="k9P-e7-LCd" customClass="ChildMapViewContoller" customModule="mapToListOne" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="k9P-e7-LCd" customClass="ChildMapViewController" customModule="mapToListOne" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="pZ4-kC-DTl"/>
                         <viewControllerLayoutGuide type="bottom" id="eWd-kq-Wyu"/>
