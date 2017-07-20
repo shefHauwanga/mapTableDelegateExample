@@ -20,10 +20,11 @@ class ChildTableDataSource: NSObject, UITableViewDataSource {
         
         let restaurantLocation = restaurantLocationStore.allLocations[indexPath.row]
         
-        if restaurantLocation.title == "BLANK" {
+        switch restaurantLocation.contentStatus {
+        case .blank:
             cell.isUserInteractionEnabled = false
             cell.locationNameLabel.text = ""
-        } else {
+        case .notBlank:
             cell.isUserInteractionEnabled = true
             cell.locationNameLabel.text = restaurantLocation.title
         }
